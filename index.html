@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARS</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/Mars.svg" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/adaptive.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg_parallax" >
+        <div class="parallax bg1" id="Space">
+            <div class="parallax bg2" >
+                <div class="parallax bg3" >
+                    <header>
+                        <div class="container">
+
+                            <div class="container_liner">
+                                <div class="header_burger-btn">
+                                    <span></span><span></span><span></span>
+                                </div>
+                                <div class="left_block">
+                                    <a class="logo"  href="#">
+                                        <img src="images/Mars.svg" alt="MARS">
+                                    </a>
+                                </div>
+                                <div class="right_block">
+                                    <nav class="menu">
+                                        <ul class="menu_list">
+                                            <li class="menu_item">
+                                                <a class="menu_link" href="#">О МАРСЕ</a>
+                                            </li>
+                                            <li class="menu_item">
+                                                <a class="menu_link" href="#">ПРОЦЕСС</a>
+                                            </li>
+                                            <li class="menu_item">
+                                                <a class="menu_link" href="#">БИЛЕТЫ</a>
+                                            </li>
+                                            <li class="menu_item">
+                                                <a class="menu_link" href="#">НОВОСТИ</a>
+                                            </li>
+                                            <li class="menu_item">
+                                                <a class="menu_link" href="#">КОНТАКТЫ</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                    <div class="header_button">
+                                        <a class="button"  href="#popup">КУПИТЬ БИЛЕТ</a>
+                                    </div>
+                                    
+
+                                </div>
+
+                            </div>   
+                        </div>
+                    </header>
+                    <main class="main">
+                        <div class="container_main">
+                            <div class="container_main_line">
+                                <div class="palka">
+                                    <img src="images/palka.png">
+                                </div>
+                                <div class="main_content">
+                                    <div class="heading">
+                                        <h1> ТОЧКА НАЗНАЧЕНИЯ:</h1>
+                                    </div>
+                                    <div class="textAndVideo">
+
+                                         <video src="images/Mars.mp4" autoplay muted loop></video>
+                                         <section id="Space2">
+                                            <div class="space2bg">
+                                                <h1>МАРС</h1>
+                                            </div>
+
+                                         </section>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="video-container">
+                                    <video src="images/Mars.mp4" autoplay loop muted></video>
+                                    <div class="text">МАРС</div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .textAndVideo {
+            width: 100%;
+            position: relative;
+        }
+
+        .textAndVideo video {
+            width: 1150px;
+            height: 470px;
+            top: 0;
+            left: 0;
+            /* position: absolute;
+            object-fit: cover; */
+            object-fit:fill;
+            
+        }
+
+        .textAndVideo section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-style: normal;
+            color: #fff;
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-size: 400px;
+            background-image: url(./images/image3.png);
+
+            mix-blend-mode: multiply;
+            object-fit: cover;
+            
+        }
+
+        .space2bg{
+            background-image: url(./images/image4.png);  
+        }
+
+        .textAndVideo section h1{
+
+        }
+    </style>
+    
+    <script src="script.js"></script>
+
+    <div class="popup" id="popup">
+        <div class="popup_body">
+            <div class="popup_content">
+                <div class="popup_titleAndClose">
+                    <a href="#" class="popup_close">
+                        <img src="images/close.png" alt="Закрыть">
+                    </a>
+                    <div class="popup_title">Бронирование билетов</div>
+                </div>
+                <div class="popup_data">
+                    <div class="popup_data_grid">
+                        <div class="popup_data_grid_item">
+                            <p>Дата заезда</p>
+                            <input type="date" class="date-input" id="dateInput" >
+                        </div>
+                        <div class="popup_data_grid_item">
+                            <p>Дата выезда</p>
+                            <input type="date" class="date-input" id="dateInput">
+                        </div>
+                        <div class="popup_data_grid_item">
+                            <p>Количество</p>
+                            <input type="number" min="1" max="10" class="date-input" id="dateInput" placeholder="Выберите количество человек">
+                        </div>
+                    </div>
+                </div>
+                <button class="popup_button">КУПИТЬ БИЛЕТЫ</button>
+
+        </div>
+    </div>
+</body>
+</html>
