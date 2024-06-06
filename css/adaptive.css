@@ -1,0 +1,391 @@
+.header_burger-btn{
+display: none;
+}
+
+
+
+.header_burger-btn{
+    display: none;
+    position: relative;
+    width: 30px;
+    height: 31px;
+    border: none;
+    background-color: #F2E1C2;
+    border-radius: 10px;
+}
+
+.header_burger-btn span{
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    left: 5px;
+    top: 14px;
+    background-color: #F23207;
+}
+
+.header_burger-btn span:nth-child(1){
+    transform: translateY(-10px);
+}
+
+.header_burger-btn span:nth-child(3){
+    transform: translateY(10px);
+}
+
+@media (max-width: 1185px) {
+    /* .textAndVideo {
+        width: 805px;
+        position: relative;
+    }
+
+    .textAndVideo video {
+        width: 805px;
+        height: 329px;
+        top: 0;
+        left: 0; */
+        /* position: absolute;
+        object-fit: cover; */
+        /* object-fit:fill;
+        
+    }
+
+    .textAndVideo section {
+        width: 805px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-style: normal;
+        color: #fff;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 280;
+        font-size: 50px;
+        background-image: url(./images/image3.png);
+
+        mix-blend-mode: multiply;
+        object-fit: fill;
+        
+    }
+    .space2bg{
+                width: 805px;
+        background-image: url(./images/image4.png);  
+    } */
+
+    .popup{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #000000ad;
+        top: 0;
+        left: 0;
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.8s ease 0s;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .popup:target{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .popup:target .popup_content{
+        transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+        opacity: 1;
+    }
+    
+    .popup_body{
+        margin-top: 133px;
+
+        max-height: 336px;
+        display: flex;
+        padding: 21px 7px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .popup_content{
+        border-radius: 10px;
+        background-color: #F2E1C2;
+        color: #000;
+        max-width: 824px;
+        padding: 21px;
+        position: relative;
+        transition: all 0.8s ease 0s;
+        opacity: 0;
+        transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+    }
+    
+    .popup_close{
+    position: absolute;
+    right: 14px;
+    top: 31px;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    }
+    
+    .popup_title{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    margin: 0px 0px 1em 0px;
+    text-transform: uppercase;
+    width: 350px;
+    }
+    
+    .popup_titleAndClose{
+    display: flex;
+    }
+    
+    .popup_data_grid{
+        display: flex;
+        gap: 14px;
+    }
+    
+    .popup_data_grid_item{
+        width: 270px;
+        height: 50px;
+    
+        
+    }
+    .popup_data_grid_item p{
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        color: #262526;
+        font-weight: 700;
+        
+    }
+    
+    input.middle:focus {
+        outline-width: 0;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
+    
+    .date-input {
+        
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        width: 210px;
+        border: none; /* Убираем стандартную границу */
+        border-bottom: 3px solid #000; /* Добавляем границу снизу */
+        padding: 8px 5px; /* Добавляем отступ */
+        font-size: 12px; /* Устанавливаем размер шрифта */
+        background-color: #F2E1C2;
+    }
+    
+    .date-input::-webkit-calendar-picker-indicator { 
+        /* Стили для иконки календаря в Chrome */
+        background: none; /* Скрываем стандартную иконку */
+        appearance: none;
+    }
+    
+    .date-input::-webkit-datetime-edit {
+        /* Стили для поля ввода в Chrome */
+        padding: 0;
+    }
+    
+    .popup_button{
+        margin-top: 60px;
+        float: right;
+        right: 0;
+        width: 300px;
+        height: 40px;
+        border: none;
+        background-color: #262526;
+        color: #F2E1C2;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    
+    .popup_button:hover{
+        transition: 1s;
+        color: #F23207;
+    }
+}
+
+@media (max-width: 900px) {
+    .menu .menu_list {
+      display: none;
+    }
+    .header_burger-btn{
+        display: block;
+        }
+        
+
+    .menu {
+
+        left: 0;
+        top: 0;
+        background-color: #F2E1C2;
+        color: #000;
+    }
+ 
+}
+
+@media (max-width: 830px) {
+        .popup{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #000000ad;
+        top: 0;
+        left: 0;
+        color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.8s ease 0s;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    .popup:target{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .popup:target .popup_content{
+        transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+        opacity: 1;
+    }
+    
+    .popup_body{
+        margin-top: 133px;
+        max-height: 500px;
+        display: flex;
+        padding: 18px 7px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .popup_content{
+        border-radius: 10px;
+        background-color: #F2E1C2;
+        color: #000;
+        max-width: 350px;
+        max-height: 500px;
+        padding: 10px;
+        position: relative;
+        transition: all 0.8s ease 0s;
+        opacity: 0;
+        transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+    }
+    
+    .popup_close{
+    position: absolute;
+    right: 4px;
+    top: 20px;
+    font-size: 6px;
+    color: #000;
+    text-decoration: none;
+    }
+    
+    .popup_title{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0px 0px 1em 0px;
+    text-transform: uppercase;
+    width: 350px;
+    }
+    
+    .popup_titleAndClose{
+    display: flex;
+    }
+    
+    .popup_data_grid{
+        display: block;
+ 
+        gap: 14px;
+
+    }
+    
+    .popup_data_grid_item{
+        margin-bottom: 20px;
+        width: 270px;
+        height: 50px;
+    
+        
+    }
+    .popup_data_grid_item p{
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        color: #262526;
+        font-weight: 700;
+        
+    }
+    
+    input.middle:focus {
+        outline-width: 0;
+    }
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
+    
+    .date-input {
+        
+        font-family: "Montserrat", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        width: 210px;
+        border: none; /* Убираем стандартную границу */
+        border-bottom: 3px solid #000; /* Добавляем границу снизу */
+        padding: 8px 5px; /* Добавляем отступ */
+        font-size: 12px; /* Устанавливаем размер шрифта */
+        background-color: #F2E1C2;
+    }
+    
+    .date-input::-webkit-calendar-picker-indicator { 
+        /* Стили для иконки календаря в Chrome */
+        background: none; /* Скрываем стандартную иконку */
+        appearance: none;
+    }
+    
+    .date-input::-webkit-datetime-edit {
+        /* Стили для поля ввода в Chrome */
+        padding: 0;
+    }
+    
+    .popup_button{
+        margin-top: 60px;
+        float: right;
+        right: 0;
+        width: 300px;
+        height: 40px;
+        border: none;
+        background-color: #262526;
+        color: #F2E1C2;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    
+    .popup_button:hover{
+        transition: 1s;
+        color: #F23207;
+    }
+}
+
+
+
+@media (max-width: 460px) {
+    .heading h1{
+
+        font-weight: 500;
+        font-family: "Montserrat", sans-serif;
+        font-size: 26px;
+    }
+
+}
